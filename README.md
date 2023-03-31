@@ -1,2 +1,4 @@
 # 705Project
-Computational project for UW Statistical Physics 2 course. Monte Carlo Simulations for Statistical Physics. Spring 2023.
+Code for the final project of PHYS 705 at the University of Waterloo.
+
+Monte Carlo Simulations and accompanying calcuations for the 2D Ising model and the 2D XY model on a square lattice.
