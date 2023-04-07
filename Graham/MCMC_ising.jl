@@ -106,6 +106,8 @@ function MonteCarlo_Ising(beta,J,Lx,Ly,warmup_steps,steps,build_lattice_function
         push!(maindf, (sumE/step,sumE2/step,sumM/step,sumM2/step))
         config = copy(new_config)
     end
+    
+    println("Completed MCMC run!")
         
     return fulldf, maindf
 end

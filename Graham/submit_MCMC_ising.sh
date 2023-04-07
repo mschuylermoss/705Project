@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --time=2-00:00:00
+#SBATCH --time=1-00:00:00
 #SBATCH --mem=4G
 #SBATCH --mail-user=msmoss@uwaterloo.ca
 #SBATCH --mail-type=FAIL
@@ -9,4 +9,4 @@
 module load StdEnv/2020 julia/1.8.1
 
 julia run_MCMC_ising.jl \
-   $L
+   $L $Start_Chain
