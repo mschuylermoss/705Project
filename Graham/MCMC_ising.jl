@@ -9,8 +9,8 @@ function build_lattice_df(Lx,Ly)
     for spin in 1:N
         up = mod(spin-1-Lx,N)
         down = mod(spin-1+Lx,N)
-        right = mod(spin-1+1,N)
-        left = mod(spin-1-1,N)
+        right = Int(((site-1)-((site-1)%Lx)) + mod(((site-1)%Lx)+1,Lx))
+        left = Int(((site-1)-((site-1)%Lx)) + mod(((site-1)%Lx)-1,Lx))
         push!(interactions[!,"$spin"],[up+1,down+1,left+1,right+1])
     end
     

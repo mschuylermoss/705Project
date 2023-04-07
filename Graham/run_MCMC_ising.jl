@@ -30,8 +30,7 @@ for T in Ts
     T = round(T,digits=2)
     for chain in (Start_Chain):(Start_Chain+N_chains-1)
         inner_steps = min((L*L)/2,200)
-        full,avgs = MonteCarlo_Ising(beta,J,L,L,warmup,n_steps,inner_steps,build_lattice_df,build_deltaE_df,Metropolis_update_function,Calculate_Ising_Energy);
-        CSV.write("/scratch/msmoss/705_Project/q1b_newcode/L_$(L)/T_$(T)_chain$(chain)_allvals.csv",  full, writeheader=true)
+        avgs = MonteCarlo_Ising(beta,J,L,L,warmup,n_steps,inner_steps,build_lattice_df,build_deltaE_df,Metropolis_update_function,Calculate_Ising_Energy);
         CSV.write("/scratch/msmoss/705_Project/q1b_newcode/L_$(L)/T_$(T)_chain$(chain)_avgvals.csv",  avgs, writeheader=true)
     end
 end
